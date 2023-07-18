@@ -34,6 +34,7 @@ function register(eventName, element, cb) {
  * Capabilities: Add/Remove styls, Add/Remove classes, listen to animation/transition end event,
  * add components
  */
+// TODO: Add Angular decorator.
 export class BaseDynamicComponent implements OnDestroy {
   animationEnd$: Observable<TransitionEvent | AnimationEvent>;
 
