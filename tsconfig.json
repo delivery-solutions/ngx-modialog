@@ -22,9 +22,6 @@
       "ngx-modialog-7/plugins/bootstrap": [
         "projects/plugins/bootstrap/src/public_api.ts"
       ],
-      "ngx-modialog-7/plugins/vex": [
-        "projects/plugins/vex/src/public_api.ts"
-      ],
       "ngx-modialog-7/plugins/js-native": [
         "projects/plugins/js-native/src/public_api.ts"
       ]

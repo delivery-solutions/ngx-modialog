@@ -5,7 +5,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ModalModule } from 'ngx-modialog-7';
 
 import { SharedModule } from './shared.module';
-import { VexDemoModule } from './vex-demo/vex-demo.module';
 import { JSNativeDemoModule } from './js-native-demo/js-native-demo.module';
 
 import { App } from './app.component';
@@ -21,7 +20,6 @@ import { InAppModalModule } from './home/in-app-plugin/index';
     RouterModule.forRoot(routes, { useHash: true, preloadingStrategy: PreloadAllModules }),
     SharedModule.forRoot(),
     ModalModule.forRoot(),
-    VexDemoModule,
     JSNativeDemoModule,
     InAppModalModule
   ],

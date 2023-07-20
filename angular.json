@@ -165,34 +165,6 @@
         }
       }
     },
-    "vex": {
-      "root": "projects/plugins/vex",
-      "sourceRoot": "projects/plugins/vex/src",
-      "projectType": "library",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "tsConfig": "projects/plugins/vex/tsconfig.lib.json",
-            "project": "projects/plugins/vex/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "projects/plugins/vex/ng-package.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/plugins/vex/src/test.ts",
-            "tsConfig": "projects/plugins/vex/tsconfig.spec.json",
-            "karmaConfig": "projects/plugins/vex/karma.conf.js"
-          }
-        }
-      }
-    },
     "js-native": {
       "root": "projects/plugins/js-native",
       "sourceRoot": "projects/plugins/js-native/src",
