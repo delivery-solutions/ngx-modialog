@@ -39,7 +39,7 @@ export class CustomModalContext extends BSModalContext {
             </div>
             <div class="row" [ngClass]="{'myclass' : shouldUseMyClass}">
                 <div class="col-xs-12">
-                    <div class="jumbotron">
+                    <div class="h-100 p-5 rounded-3" style="background-color: #e9ecef;">
                         <h1>Do the math to quit:</h1>
                         <p class="lead">I received an injection of the number <strong>{{context.num1}}</strong> and the number <strong>{{context.num2}}</strong></p>
                         <span>What is the sum?</span>
