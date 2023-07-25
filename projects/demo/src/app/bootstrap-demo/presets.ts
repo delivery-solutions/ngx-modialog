@@ -61,7 +61,7 @@ export function cascading(modal: Modal) {
       .size('sm')
       .title('Cascading modals!')
       .body('Find your way out step by step or click CLOSE ALL to close all open dialogs at once')
-      .addButton('btn-primary', 'CLOSE ALL',
+      .addButton('btn btn-primary', 'CLOSE ALL',
         (cmp: any, $event: MouseEvent) => cmp.dialog.close('all'))
   );
 
