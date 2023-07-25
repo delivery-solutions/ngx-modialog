@@ -1,5 +1,5 @@
 import { ViewContainerRef } from '@angular/core';
-import { DialogRef, DROP_IN_TYPE, OverlayConfig } from 'ngx-modialog-7';
+import { DialogRef, DROP_IN_TYPE, OverlayConfig } from 'ngx-modialog';
 import { Modal } from '../modal';
 
 import {

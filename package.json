@@ -1,6 +1,6 @@
 {
-  "name": "ngx-modialog-repo",
-  "version": "0.0.0",
+  "name": "@deliverysolutions/ngx-modialog",
+  "version": "15.2.9",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

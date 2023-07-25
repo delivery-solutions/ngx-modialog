@@ -1,9 +1,9 @@
 {
-  "name": "ngx-modialog-7/plugins/js-native",
+  "name": "@deliverysolutions/ngx-modialog/plugins/js-native",
   "peerDependencies": {
     "@angular/common": "^15.2.9",
     "@angular/core": "^15.2.9",
-    "ngx-modialog-7": "*"
+    "@deliverysolutions/ngx-modialog": "*"
   },
   "dependencies": {
     "tslib": "^2.0.0"

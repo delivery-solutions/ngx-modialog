@@ -9,7 +9,7 @@ import {
   DialogRef,
   OverlayRenderer,
   ModalOverlay
-} from 'ngx-modialog-7';
+} from 'ngx-modialog';
 
 @Injectable()
 export class JSNativeModalRenderer implements OverlayRenderer {

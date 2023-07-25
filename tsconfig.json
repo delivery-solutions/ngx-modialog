@@ -16,13 +16,13 @@
       "dom"
     ],
     "paths": {
-      "ngx-modialog-7": [
-        "projects/ngx-modialog-7/src/public_api.ts"
+      "ngx-modialog": [
+        "projects/ngx-modialog/src/public_api.ts"
       ],
-      "ngx-modialog-7/plugins/bootstrap": [
+      "ngx-modialog/plugins/bootstrap": [
         "projects/plugins/bootstrap/src/public_api.ts"
       ],
-      "ngx-modialog-7/plugins/js-native": [
+      "ngx-modialog/plugins/js-native": [
         "projects/plugins/js-native/src/public_api.ts"
       ]
     },
