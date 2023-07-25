@@ -6,9 +6,8 @@
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es5",
+    "target": "ES2022",
     "typeRoots": [
       "node_modules/@types"
     ],
@@ -23,12 +22,10 @@
       "ngx-modialog-7/plugins/bootstrap": [
         "projects/plugins/bootstrap/src/public_api.ts"
       ],
-      "ngx-modialog-7/plugins/vex": [
-        "projects/plugins/vex/src/public_api.ts"
-      ],
       "ngx-modialog-7/plugins/js-native": [
         "projects/plugins/js-native/src/public_api.ts"
       ]
-    }
+    },
+    "useDefineForClassFields": false
   }
 }

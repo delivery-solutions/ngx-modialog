@@ -9,7 +9,6 @@
   "keywords": [
     "angular",
     "bootstrap",
-    "vex",
     "modal"
   ],
   "author": "Shlomi Assaf",
@@ -19,8 +18,11 @@
   "bugs": {
     "url": "https://github.com/brakowski/ngx-modialog/issues"
   },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
   "peerDependencies": {
-    "@angular/common": "^9.1.0",
-    "@angular/core": "^9.1.0"
+    "@angular/common": "^15.2.9",
+    "@angular/core": "^15.2.9"
   }
 }

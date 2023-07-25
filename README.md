@@ -32,7 +32,6 @@ modal.alert()
 Available plugins: 
 
   - Bootstrap (3 & 4)
-  - [Vex 3 & 4](http://github.hubspot.com/vex/docs/welcome/)
 
 ## Install
 ```bash
@@ -135,7 +134,7 @@ View it at [shlomiassaf.github.io/ngx-modialog](http://shlomiassaf.github.io/ngx
 
 The demo application is [part of this repository](https://github.com/shlomiassaf/ngx-modialog/tree/master/src/demo/app) and it is a great place to learn by example.
 
-#### Bootstrap / VEX features:
+#### Bootstrap:
   - Customizable with components, Presets and more...  
   - Select cancel/quit key.
   - Cascading modals.  

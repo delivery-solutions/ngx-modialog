@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "../../out-tsc/app",
-    "module": "es2015",
+    "module": "esnext",
     "types": [
       "node"
     ]
@@ -10,5 +10,9 @@
   "exclude": [
     "src/test.ts",
     "**/*.spec.ts"
+  ],
+  "files": [
+    "../demo/src/main.ts",
+    "../demo/src/polyfills.ts"
   ]
 }

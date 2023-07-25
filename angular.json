@@ -10,7 +10,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/ngx-modialog-7/tsconfig.lib.json",
             "project": "projects/ngx-modialog-7/ng-package.json"
@@ -27,18 +27,6 @@
             "main": "projects/ngx-modialog-7/src/test.ts",
             "tsConfig": "projects/ngx-modialog-7/tsconfig.spec.json",
             "karmaConfig": "projects/ngx-modialog-7/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/ngx-modialog-7/tsconfig.lib.json",
-              "projects/ngx-modialog-7/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
           }
         }
       }
@@ -65,7 +53,14 @@
             "styles": [
               "projects/demo/src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "aot": false,
+            "vendorChunk": true,
+            "extractLicenses": false,
+            "buildOptimizer": false,
+            "sourceMap": true,
+            "optimization": false,
+            "namedChunks": true
           },
           "configurations": {
             "distLib": {
@@ -81,14 +76,14 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
             }
-          }
+          },
+          "defaultConfiguration": ""
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
@@ -126,18 +121,6 @@
               "projects/demo/src/assets"
             ]
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/demo/tsconfig.app.json",
-              "projects/demo/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -151,15 +134,6 @@
             "protractorConfig": "projects/demo-e2e/protractor.conf.js",
             "devServerTarget": "demo:serve"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": "projects/demo-e2e/tsconfig.e2e.json",
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -170,7 +144,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/plugins/bootstrap/tsconfig.lib.json",
             "project": "projects/plugins/bootstrap/ng-package.json"
@@ -188,58 +162,6 @@
             "tsConfig": "projects/plugins/bootstrap/tsconfig.spec.json",
             "karmaConfig": "projects/plugins/bootstrap/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/plugins/bootstrap/tsconfig.lib.json",
-              "projects/plugins/bootstrap/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
-    "vex": {
-      "root": "projects/plugins/vex",
-      "sourceRoot": "projects/plugins/vex/src",
-      "projectType": "library",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/plugins/vex/tsconfig.lib.json",
-            "project": "projects/plugins/vex/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "project": "projects/plugins/vex/ng-package.prod.json"
-            }
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/plugins/vex/src/test.ts",
-            "tsConfig": "projects/plugins/vex/tsconfig.spec.json",
-            "karmaConfig": "projects/plugins/vex/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/plugins/vex/tsconfig.lib.json",
-              "projects/plugins/vex/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     },
@@ -250,7 +172,7 @@
       "prefix": "lib",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
+          "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
             "tsConfig": "projects/plugins/js-native/tsconfig.lib.json",
             "project": "projects/plugins/js-native/ng-package.json"
@@ -268,23 +190,10 @@
             "tsConfig": "projects/plugins/js-native/tsconfig.spec.json",
             "karmaConfig": "projects/plugins/js-native/karma.conf.js"
           }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/plugins/js-native/tsconfig.lib.json",
-              "projects/plugins/js-native/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
         }
       }
     }
   },
-  "defaultProject": "demo",
   "cli": {
     "packageManager": "yarn"
   }

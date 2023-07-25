@@ -91,7 +91,7 @@ export class DialogRef<T> {
   bailOut() {
     if (this.destroyed !== true) {
       this.destroyed = true;
-      this._onDestroy.next(null);
+      this._onDestroy.next();
       this._onDestroy.complete();
       this._resultDeferred.reject(new DialogBailOutError());
     }
@@ -112,7 +112,7 @@ export class DialogRef<T> {
   }
 
   private _destroy(): void {
-    this._onDestroy.next(null);
+    this._onDestroy.next();
     this._onDestroy.complete();
     this.overlayRef.destroy();
   }

@@ -13,28 +13,23 @@ import {
 } from './overlay/index';
 
 @NgModule({
-  declarations: [
-    ModalOverlay,
-    CSSBackdrop,
-    CSSDialogContainer,
-    OverlayDialogBoundary,
-    OverlayTarget
-  ],
-  imports: [CommonModule],
-  exports: [
-    CSSBackdrop,
-    CSSDialogContainer,
-    OverlayDialogBoundary,
-    OverlayTarget
-  ],
-  providers: [
-    Overlay
-  ],
-  entryComponents: [
-    ModalOverlay,
-    CSSBackdrop,
-    CSSDialogContainer
-  ]
+    declarations: [
+        ModalOverlay,
+        CSSBackdrop,
+        CSSDialogContainer,
+        OverlayDialogBoundary,
+        OverlayTarget
+    ],
+    imports: [CommonModule],
+    exports: [
+        CSSBackdrop,
+        CSSDialogContainer,
+        OverlayDialogBoundary,
+        OverlayTarget
+    ],
+    providers: [
+        Overlay
+    ]
 })
 export class ModalModule {
 
@@ -44,7 +39,7 @@ export class ModalModule {
    * using entryComponents, this is an easy way to do it.
    * @param entryComponents A list of dynamically inserted components (dialog's).
    */
-  static withComponents(entryComponents: Array<Type<any> | any[]>): ModuleWithProviders {
+  static withComponents(entryComponents: Array<Type<any> | any[]>): ModuleWithProviders<ModalModule> {
     return {
       ngModule: ModalModule,
       providers: [
@@ -57,7 +52,7 @@ export class ModalModule {
    * Returns a NgModule for use in the root Module.
    * @param entryComponents A list of dynamically inserted components (dialog's).
    */
-  static forRoot(entryComponents?: Array<Type<any> | any[]>): ModuleWithProviders {
+  static forRoot(entryComponents?: Array<Type<any> | any[]>): ModuleWithProviders<ModalModule> {
     return {
       ngModule: ModalModule,
       providers: [
