@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ModalModule } from 'ngx-modialog';
+import { ModalModule } from '@deliverysolutions/ngx-modialog';
 
 import { SharedModule } from './shared.module';
 import { JSNativeDemoModule } from './js-native-demo/js-native-demo.module';

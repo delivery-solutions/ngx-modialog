@@ -4,7 +4,7 @@ import {
   FluentAssignMethod,
   extend,
   arrayUnion
-} from 'ngx-modialog';
+} from '@deliverysolutions/ngx-modialog';
 
 const DEFAULT_VALUES = {
   dialogClass: 'modal-dialog',

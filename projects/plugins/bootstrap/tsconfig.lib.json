@@ -16,7 +16,7 @@
       "es2015"
     ],
     "paths": {
-      "ngx-modialog": [
+      "@deliverysolutions/ngx-modialog": [
         "dist/ngx-modialog"
       ]
     }

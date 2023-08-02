@@ -4,7 +4,7 @@ import {
   ModalOpenContextBuilder,
   ModalOpenContext,
   FluentAssignMethod
-} from 'ngx-modialog';
+} from '@deliverysolutions/ngx-modialog';
 
 
 export class InAppModalContext extends ModalOpenContext {

@@ -3,7 +3,7 @@ import {
   OneButtonPresetBuilder,
   TwoButtonPresetBuilder,
   PromptPresetBuilder
-} from 'ngx-modialog/plugins/bootstrap';
+} from '@deliverysolutions/ngx-modialog/plugins/bootstrap';
 
 export function alert(modal: Modal): OneButtonPresetBuilder {
   return modal.alert()
