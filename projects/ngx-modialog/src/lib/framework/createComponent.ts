@@ -1,7 +1,7 @@
 import {
   ComponentRef,
-  ComponentFactory,
-  ComponentFactoryResolver,
+  createComponent as ngCreateComponent,
+  EnvironmentInjector,
   Injector,
   ViewContainerRef
 } from '@angular/core';
@@ -15,18 +15,18 @@ export interface CreateComponentArgs {
 
 export function createComponent(instructions: CreateComponentArgs): ComponentRef<any> {
   const injector: Injector =  instructions.injector || instructions.vcRef.injector;
-  const cmpFactory: ComponentFactory<any>
-    = injector.get(ComponentFactoryResolver).resolveComponentFactory(instructions.component);
 
   if (instructions.vcRef) {
-    return instructions.vcRef.createComponent(
-      cmpFactory,
-      instructions.vcRef.length,
+    return instructions.vcRef.createComponent(instructions.component, {
+      index: instructions.vcRef.length,
       injector,
-      instructions.projectableNodes
-    );
+      projectableNodes: instructions.projectableNodes
+    });
   } else {
-    return cmpFactory.create(injector);
+    return ngCreateComponent(instructions.component, {
+      environmentInjector: injector.get(EnvironmentInjector),
+      elementInjector: injector,
+      projectableNodes: instructions.projectableNodes
+    });
   }
 }
-

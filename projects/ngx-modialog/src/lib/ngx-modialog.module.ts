@@ -1,4 +1,4 @@
-import { ANALYZE_FOR_ENTRY_COMPONENTS, NgModule, ModuleWithProviders, Type } from '@angular/core';
+import { NgModule, ModuleWithProviders, Type } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EVENT_MANAGER_PLUGINS } from '@angular/platform-browser';
 
@@ -34,31 +34,28 @@ import {
 export class ModalModule {
 
   /**
-   * Returns a ModalModule pre-loaded with a list of dynamically inserted components.
-   * Since dynamic components are not analysed by the angular compiler they must register manually
-   * using entryComponents, this is an easy way to do it.
-   * @param entryComponents A list of dynamically inserted components (dialog's).
+   * Returns a ModalModule.
+   * Ivy no longer needs entryComponents (ANALYZE_FOR_ENTRY_COMPONENTS was removed in Angular 22);
+   * the argument is kept so existing callers still compile.
+   * @param entryComponents A list of dynamically inserted components (dialog's), ignored.
    */
   static withComponents(entryComponents: Array<Type<any> | any[]>): ModuleWithProviders<ModalModule> {
     return {
       ngModule: ModalModule,
-      providers: [
-        {provide: ANALYZE_FOR_ENTRY_COMPONENTS, useValue: entryComponents, multi: true}
-      ]
+      providers: []
     };
   }
 
   /**
    * Returns a NgModule for use in the root Module.
-   * @param entryComponents A list of dynamically inserted components (dialog's).
+   * @param entryComponents A list of dynamically inserted components (dialog's), ignored under Ivy.
    */
   static forRoot(entryComponents?: Array<Type<any> | any[]>): ModuleWithProviders<ModalModule> {
     return {
       ngModule: ModalModule,
       providers: [
         {provide: OverlayRenderer, useClass: DOMOverlayRenderer},
-        {provide: EVENT_MANAGER_PLUGINS, useClass: DOMOutsideEventPlugin, multi: true},
-        {provide: ANALYZE_FOR_ENTRY_COMPONENTS, useValue: entryComponents || [], multi: true}
+        {provide: EVENT_MANAGER_PLUGINS, useClass: DOMOutsideEventPlugin, multi: true}
       ]
     };
   }

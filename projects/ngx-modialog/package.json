@@ -21,11 +21,29 @@
   "bugs": {
     "url": "https://github.com/ds-arb/ngx-modialog/issues"
   },
+  "exports": {
+    "./plugins/bootstrap": {
+      "types": "./plugins/bootstrap/index.d.ts",
+      "esm2020": "./plugins/bootstrap/esm2020/deliverysolutions-ngx-modialog-plugins-bootstrap.mjs",
+      "es2020": "./plugins/bootstrap/fesm2020/deliverysolutions-ngx-modialog-plugins-bootstrap.mjs",
+      "es2015": "./plugins/bootstrap/fesm2015/deliverysolutions-ngx-modialog-plugins-bootstrap.mjs",
+      "node": "./plugins/bootstrap/fesm2015/deliverysolutions-ngx-modialog-plugins-bootstrap.mjs",
+      "default": "./plugins/bootstrap/fesm2020/deliverysolutions-ngx-modialog-plugins-bootstrap.mjs"
+    },
+    "./plugins/js-native": {
+      "types": "./plugins/js-native/index.d.ts",
+      "esm2020": "./plugins/js-native/esm2020/deliverysolutions-ngx-modialog-plugins-js-native.mjs",
+      "es2020": "./plugins/js-native/fesm2020/deliverysolutions-ngx-modialog-plugins-js-native.mjs",
+      "es2015": "./plugins/js-native/fesm2015/deliverysolutions-ngx-modialog-plugins-js-native.mjs",
+      "node": "./plugins/js-native/fesm2015/deliverysolutions-ngx-modialog-plugins-js-native.mjs",
+      "default": "./plugins/js-native/fesm2020/deliverysolutions-ngx-modialog-plugins-js-native.mjs"
+    }
+  },
   "dependencies": {
     "tslib": "^2.0.0"
   },
   "peerDependencies": {
-    "@angular/common": "^15.2.9",
-    "@angular/core": "^15.2.9"
+    "@angular/common": ">=15.2.9 <23",
+    "@angular/core": ">=15.2.9 <23"
   }
 }
